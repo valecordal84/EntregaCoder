@@ -2,16 +2,22 @@
 
 {% load static %}
 
-{% block content %}
-
-<form action="" method="post">
-    {% csrf_token %}
-    <table>
-        {{ form }}
-    </table>
-    <input type="submit" value="Enviar">
-
-</form>
-
+{% block contenido %}
+<html>
+<head>
+    <title>Agregar Inventario</title>
+</head>
+<body>
+    <h1>Agregar Inventario</h1>
+    <form method="post">
+        {% csrf_token %}
+        
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
 
 {% endblock %}
+
+<!-- No se porque cuando voy a la URL "inventarioForm" aparece la pagina en blanco
+ solo con la parte del static-->

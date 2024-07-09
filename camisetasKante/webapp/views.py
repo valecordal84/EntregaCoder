@@ -45,6 +45,7 @@ def agregarPedido(request):
         miForm=ClienteForm()
     return render(request, "webapp/pedidoForm.html", {"form" : miForm})
 
+
 def agregarInventario(request):
     if request.method == "POST":
         miForm=InventarioForm(request.POST)
@@ -57,7 +58,7 @@ def agregarInventario(request):
     else:
         miForm=ClienteForm()
     return render(request, "webapp/inventarioForm.html", {"form" : miForm})
-            
+ 
 
 #Busqueda
 def buscarInventario(request):
@@ -72,3 +73,10 @@ def encontrarInventario(request):
         contexto={'camisetas' : Inventario.objects.all()}
         
     return render(request, "webapp/inventario.html", contexto)
+
+"""
+Se que dentro de la parte de ENCONTRAR INVENTARIO/BUSCAR INVENTARIO tambien tengo otro error
+pero tampoco logro descifrar cual es el error. Tengo la teoria de que el error 
+de nuevo se encuentra dentro del archivo HTML, pero es que de HTML no se nada de nada, 
+por ello no sabria identificar donde se encuentra el error.
+"""

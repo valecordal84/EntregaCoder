@@ -32,6 +32,7 @@ urlpatterns = [
     path('pedidoForm', views.agregarPedido, name="agregarPedido"),
     path('inventarioForm', views.agregarInventario, name="agregarInventario"),
     
+    
     #Busqueda
     path('buscarInventario',views.buscarInventario, name="buscarInventario"),
     path('encontrarInventario', views.encontrarInventario, name="encontrarInventario"),
